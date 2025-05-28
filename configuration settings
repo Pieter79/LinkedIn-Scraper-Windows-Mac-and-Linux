@@ -1,0 +1,18 @@
+Mode > List
+Spider > Crawl	all		
+Spider > Extraction		Page Title	
+Spider > Extraction		Meta Description	
+Spider > Extraction		Meta Keywords	
+Spider > Extraction		H1	
+Spider > Extraction		H2	
+Spider > Limits		Limit Crawl Depth = 0	
+Spider > Rendering		Text Only	
+Spider > Advance		Cookie Storage = Do Not Store	
+Spider > Advance		Allways Follow Redirects	
+Spider > Advance		Response Timeout (secs) = 6	
+robots.txt		Ignore robots.txt	
+URL Rewriting			Regex = https://\w+.linkedin.com 			Replace = https://www.linkedin.com
+Exclude		https://www.linkedin.cn/incareer/	
+User-Agent		Chrome	
+Custom > Custom Link Positions	Enable = off		
+Authentication > Standards Based	Allow standards based authentication = off		
