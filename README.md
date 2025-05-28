@@ -1,9 +1,8 @@
 # LinkedIn-Scraper-Windows-Mac-and-Linux
 LinkedIn scraper Windows, MAC and Linux
-field	
-Extraction method	
-XPath 
-setting	rule
+
+Using RegEx and XPath for extraction.
+These settings might not be complete ;)
 
 1
 name	
