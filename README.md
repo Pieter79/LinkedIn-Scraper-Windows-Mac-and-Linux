@@ -18,7 +18,6 @@ Regex
 3
 streetAddress	
 Regex		
-
 "streetAddress":"(.*?)"
 
 4
