@@ -80,7 +80,8 @@ Regex
 data-semaphore-content-urn="urn:li:organization:(.*?)"
 
 16
-Website	XPath	
+about us website	
+XPath	
 Extract Text	
 //div[@class='mb-2 flex papabear:mr-3 mamabear:mr-3 babybear:flex-wrap']//dd//a[@data-tracking-control-name='about_website']
 
@@ -91,39 +92,40 @@ Extract Text
 //div[@class='core-section-container__content break-words']//p[starts-with(@data-test-id,'about-us__description')]
 
 18
-industry	
+About us industry	
 XPath	
 Function Value	
 normalize-space(//div[@class='core-section-container__content break-words']//dl//div[contains(@data-test-id,'about-us__industry')]/dd)
 
 19
-size	
+About us size	
 XPath	
 Function Value	
 normalize-space(//div[@class='core-section-container__content break-words']//dl//div[contains(@data-test-id,'about-us__size')]/dd)
 
 20
-headquarteres	
+About us headquarteres	
 XPath	
 Function Value	
 normalize-space(//div[@class='core-section-container__content break-words']//dl//div[contains(@data-test-id,'about-us__headquarters')]/dd)
 
 21
-organizationType	
+About us organizationType	
 XPath	
 Function Value	
 normalize-space(//div[@class='core-section-container__content break-words']//dl//div[contains(@data-test-id,'about-us__organizationType')]/dd)
 
 22
-foundedOn	
+About us foundedOn	
 XPath	
 Function Value	
 normalize-space(//div[@class='core-section-container__content break-words']//dl//div[contains(@data-test-id,'about-us__foundedOn')]/dd)
 
 23
-specialties	
+About us specialties	
 XPath	
-Function Value	normalize-space(//div[@class='core-section-container__content break-words']//dl//div[contains(@data-test-id,'about-us__specialties')]/dd)
+Function Value	
+normalize-space(//div[@class='core-section-container__content break-words']//dl//div[contains(@data-test-id,'about-us__specialties')]/dd)
 
 24
 affiliated-pages	
@@ -138,13 +140,13 @@ Extract Text
 //a[contains(@href,'similar-pages')]/@href
 
 26
-products	
+/products/	
 XPath	
 Extract Text	
 //a[contains(@href,'/products/')]/@href
 
 27
-school	
+/school/	
 XPath	
 Extract Text	
 //a[contains(@href,'/school/')]/@href
@@ -153,7 +155,7 @@ Extract Text
 org-employees	
 XPath	
 Extract Text	
-//a[contains(@href,'trk=org-employees')]/@href
+//a[contains(@href,'?trk=org-employees')]/@href
 
 29
 /in/	
@@ -168,7 +170,7 @@ Extract Text
 //a[contains(@href,'linkedin.com/company/')]/@href
 
 31
-showcase	
+/showcase/	
 XPath	
 Extract Text	
 //a[contains(@href,'linkedin.com/showcase/')]/@href
@@ -294,82 +296,83 @@ normalize-space(//*[@id="address-1"])
 
 52			
 Bing Maps address-0	
-XPath	Extract Text	
+XPath	
+Extract Text	
 //a[contains(@aria-describedby,'address-0')]/@href
 
 53
 Bing Maps address-1	
-XPath	Extract Text	
+XPath	
+Extract Text	
 //a[contains(@aria-describedby,'address-1')]/@href
 
 54			
-Total rounds	
+Crunchbase Total rounds
 XPath	
 Function Value	
 normalize-space(//div[@class='aside-section-container__content break-words']//a[starts-with(@data-tracking-control-name,'funding_all-rounds')]//span[2])
 
 55
-crunchbase all rounds	
+Crunchbase all rounds	
 XPath	
 Extract Text	
 //div[@class='aside-section-container__content break-words']//a[starts-with(@data-tracking-control-name,'funding_all-rounds')]/@href
 
 56
-crunchbase last round	
+Crunchbase last round	
 XPath	
 Extract Text	
 //a[starts-with(@data-tracking-control-name,'funding_last-round')]/@href
 
 57
-last round of funding	
+Crunchbase last round of funding	
 XPath	
 Function Value	
 normalize-space(//div[@class='my-2']//p[2])
 
 58
-crunchbase investor 1	
+Crunchbase investor	
 XPath	
 Extract Text	
 //a[1][contains(@data-tracking-control-name,'funding_investors')]/@href
 
 59
-crunchbase investor 1	
-XPath	
-Extract Text	
-//a[1][contains(@data-tracking-control-name,'funding_investors')]/@href
-
-60
-name investors	
+Crunchbase name investors	
 XPath	
 Function Value	
 normalize-space(//div[@class='mb-2']//a[1][@data-tracking-control-name='funding_investors'])
 
-61			
-job description	
+60			
+Job position description	
 XPath	
 Extract Text	
 //div[@class='overflow-hidden self-center grow']//h2
 
-62
-job at company	
+61
+Job position at company
 XPath	
 Extract Text	
 //div[@class='overflow-hidden self-center grow']//h3
 
-63
-job URL	
+62
+Job position URL	
 XPath	
 Extract Text	
 //div[@class='rounded-md border-1 border-solid border-color-border-faint p-1']//a/@href
 			
-64
+63
 Posts	
 XPath	
 Extract Text	
 //div[@class='attributed-text-segment-list__container relative mt-1 mb-1.5 babybear:mt-0 babybear:mb-0.5']//p//a/@href
 
-65			
+64			
 JSON	
 XPath	
 Extract Text	
 //script[@type='application/ld+json']
+
+65
+Profile URL
+Regex
+linkedin\.com\/\w+\/[^\/"\s\,\?]+
